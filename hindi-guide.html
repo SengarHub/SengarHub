@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>हिंदी सीखो और खेलो!</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background-color: #fce4ec; padding: 20px; }
+        h1 { color: #d81b60; }
+        .box { display: inline-block; width: 150px; height: 150px; margin: 15px; border-radius: 10px; cursor: pointer; color: white; font-size: 24px; line-height: 150px; font-weight: bold; }
+        #red { background-color: #e53935; }
+        #green { background-color: #43a047; }
+        #yellow { background-color: #fbc02d; }
+        #blue { background-color: #1e88e5; }
+        #result { font-size: 28px; margin-top: 30px; font-weight: bold; color: #880e4f; }
+    </style>
+</head>
+<body>
+    <h1>आओ हिंदी सीखें!</h1>
+    <p>रंग पर क्लिक करो और उनका हिंदी नाम सुनो।</p>
+    <div>
+        <div class="box" id="red" onclick="sayName('लाल')">लाल</div>
+        <div class="box" id="green" onclick="sayName('हरा')">हरा</div>
+        <div class="box" id="yellow" onclick="sayName('पीला')">पीला</div>
+        <div class="box" id="blue" onclick="sayName('नीला')">नीला</div>
+    </div>
+    <div id="result"></div>
+    <script>
+        function sayName(name) {
+            document.getElementById('result').innerText = "यह है: " + name;
+            // यहाँ आप चाहें तो स्पीच सिंथेसिस API का उपयोग करके ऑडियो भी चला सकते हैं
+        }
+    </script>
+</body>
+</html>
